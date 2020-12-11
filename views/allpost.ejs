@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <h2>Welcome to all post</h2>
+
+
+    <%  for(let p of userphoto) {  %>
+
+
+  
+
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator"  src= "<%= p.avatar  %>" alt="image"  width="300" height="400"/>
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+          <p><a href="#">Like</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4name"> <%= p.username  %> <i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+      <% } %>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
